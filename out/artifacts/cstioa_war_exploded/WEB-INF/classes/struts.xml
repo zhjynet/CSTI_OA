@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="user" namespace="/" extends="struts-default" >
+        <action name="user_*" class="com.action.UserAction" method="{1}" >
+            <result name="success">/jumptoindex.jsp</result>
+            <result name="judgeipsuccess">/index.jsp</result>
+            <result name="loginout">/login.html</result>
+            <result name="error">/login.html</result>
+            <result name="judgeiperror">/login.html</result>
+        </action>
+    </package>
+    <package name="signin" namespace="/" extends="struts-default" >
+        <action name="signin_*" class="com.action.SigninAction" method="{1}" >
+            <result name="success_signin">/jumptoindex.jsp</result>
+            <result name="error_signin">/jumptoindex.jsp</result>
+            <result name="selectsigninsuccess">/signInManagement.jsp</result>
+            <result name="selectDoYouSigninsuccess">/summaryofcheckin.jsp</result>
+        </action>
+    </package>
+</struts>
